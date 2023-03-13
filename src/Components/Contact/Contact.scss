@@ -1,0 +1,126 @@
+$color-green: #395e66;
+$color-green2: #9cc5a1;
+$color-green3: #bed6db;
+$color-white: rgb(255, 255, 255);
+$color-gray: rgb(153, 153, 153);
+
+@mixin placeholder {
+  color: $color-green;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.contact {
+  height: 80vh;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: $color-green;
+    padding-bottom: 3rem;
+  }
+  .icon-media {
+    margin-bottom: 1rem;
+    a {
+      color: $color-green;
+      font-size: 1.8rem;
+      padding: 0 1rem;
+    }
+    a:hover {
+      color: $color-green3;
+    }
+  }
+  form {
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(214, 235, 217, 0.5);
+    padding: 2rem 2rem;
+    #name {
+      margin-right: 0.2rem;
+    }
+
+    .input-name-email {
+      text-align: center;
+    }
+
+    input {
+      width: 49.5%;
+      margin-bottom: 1rem;
+      color: $color-green;
+      border: none;
+      border-radius: 5px;
+      padding-left: 0.5rem;
+    }
+    input::placeholder {
+      @include placeholder;
+    }
+    input:focus {
+      outline: none;
+    }
+    textarea {
+      border: none;
+      color: $color-green;
+      padding-left: 0.5rem;
+      border-radius: 5px;
+    }
+    textarea::placeholder {
+      @include placeholder;
+    }
+    textarea:focus {
+      outline: none;
+    }
+  }
+  .btn {
+    margin: 1rem auto 0;
+    width: fit-content;
+    background-color: $color-green;
+    box-shadow: 0 0 2px $color-gray;
+    color: $color-white;
+    border-radius: 5px;
+    padding: 0.2rem 2rem;
+  }
+  .btn:hover {
+    color: $color-green;
+    background-color: $color-green3;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .contact {
+    form {
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    margin-top: 15%;
+
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+    }
+    form {
+      input {
+        width: 100%;
+      }
+    }
+
+    .icon-media {
+      margin-bottom: 0.6rem;
+      a {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

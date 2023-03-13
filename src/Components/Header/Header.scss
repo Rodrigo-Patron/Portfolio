@@ -1,0 +1,41 @@
+$color-green: #395e66;
+
+nav {
+  background-color: rgb(255, 251, 251, 0.6);
+  display: flex;
+  justify-content: center;
+  // margin-bottom: 5rem;
+  position: sticky;
+  top: 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  li {
+    font-size: 1rem;
+    list-style-type: none;
+    padding: 1rem 3rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-green;
+    opacity: 0.8;
+  }
+  a:hover {
+    color: $color-green;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    li {
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0.5rem 1rem;
+    }
+  }
+}

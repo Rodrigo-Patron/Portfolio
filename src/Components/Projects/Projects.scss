@@ -1,0 +1,64 @@
+$color-green: #395e66;
+$color-green2: #9cc5a1;
+$color-green3: #bed6db;
+$color-white: rgb(255, 255, 255);
+$color-gray: rgb(153, 153, 153);
+
+.projects {
+  height: 80vh;
+  margin-top: 5%;
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: $color-green;
+    font-weight: bold;
+    padding-bottom: 3rem;
+  }
+
+  .table {
+    margin: auto;
+    width: 80%;
+    border-color: rgb(214, 235, 217, 0.5);
+
+    th {
+      color: $color-green;
+      background-color: $color-white;
+      font-size: 1.2rem;
+    }
+    td {
+      padding: 1rem;
+      color: $color-green;
+    }
+    a {
+      text-decoration: none;
+      color: $color-green;
+    }
+    a:hover {
+      color: #78a8b3;
+    }
+
+    tr:nth-child(odd) {
+      background-color: rgb(214, 235, 217, 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .projects {
+    margin-top: 15%;
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+    .table {
+      width: 95%;
+    }
+    th {
+      font-size: 0.9rem;
+    }
+    td {
+      font-size: 0.8rem;
+    }
+  }
+}

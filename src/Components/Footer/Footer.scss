@@ -1,0 +1,22 @@
+$color-gray: rgb(153, 153, 153, 0.4);
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 2.5rem;
+  margin-bottom: -0.5rem;
+  p {
+    font-size: 0.9rem;
+    color: $color-gray;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    margin-bottom: -0.5rem;
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
