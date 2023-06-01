@@ -17,6 +17,36 @@ const Projects = () => {
           <tr>
             <td>
               <a
+                href="https://github.com/Rodrigo-Patron/StudyBoost"
+                target="_blank"
+              >
+                StudyBoost
+              </a>
+            </td>
+            <td>
+              Fullstack project that allows users to schedule meetings by
+              creating appointments. Made with React in Frontend and Node.js and
+              MongoDB in Backend.{" "}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://github.com/Rodrigo-Patron/E-Commerce-Platform"
+                target="_blank"
+              >
+                E-Commerce Platform
+              </a>
+            </td>
+            <td>
+              Backend project simulating an E-commerce Platform, allowing to
+              register a user, create products and add them to the cart. Made
+              with Node.js, Express and MongoDB.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
                 href="https://github.com/Rodrigo-Patron/Weather-App"
                 target="_blank"
               >
