@@ -1,64 +1,121 @@
 $color-green: #395e66;
-$color-green2: #9cc5a1;
-$color-green3: #bed6db;
-$color-white: rgb(255, 255, 255);
-$color-gray: rgb(153, 153, 153);
+$color-white: #fbfbfb;
+$color-gray: #434343;
 
 .projects {
-  height: 80vh;
-  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  h2 {
-    font-size: 3rem;
+  h1 {
+    margin-top: .9rem;
+    margin-bottom: 3.5rem;
+    font-size: 2vw;
     text-align: center;
-    color: $color-green;
-    font-weight: bold;
-    padding-bottom: 3rem;
+    color: $color-white;
   }
 
-  .table {
-    margin: auto;
-    width: 80%;
-    border-color: rgb(214, 235, 217, 0.5);
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    gap: 1.5rem;
+    width: 90%;
+  }
 
-    th {
-      color: $color-green;
-      background-color: $color-white;
-      font-size: 1.2rem;
-    }
-    td {
-      padding: 1rem;
-      color: $color-green;
-    }
+  .project-card {
+   
+    background-color: rgba(57, 94, 102, 0.3);
+    border: 1px solid rgba(57, 94, 102, 0.8);
+    border-radius: 10px;
+    padding: 1rem;
+    width: calc(33.333% - 1rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
     a {
       text-decoration: none;
-      color: $color-green;
-    }
-    a:hover {
-      color: #78a8b3;
+      :hover {
+        color: rgb(120, 168, 179, 0.5);
+      }
+      .click-text {
+        font-size: 0.7rem;
+        color: rgb(120, 168, 179, 0.5);
+      }
     }
 
-    tr:nth-child(odd) {
-      background-color: rgb(214, 235, 217, 0.5);
+    h2 {
+      margin-bottom: 0.3rem;
+      font-size: 1.3rem;
+      color: $color-white;
+    }
+
+    p {
+      color: $color-white;
+      font-size: .9rem;
+    }
+
+    &:hover {
+      transform: scale(1.02);
     }
   }
-}
 
-@media screen and (max-width: 767px) {
-  .projects {
-    margin-top: 15%;
-    h2 {
-      font-size: 2rem;
-      padding-bottom: 2rem;
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3vw;
     }
-    .table {
+
+    .card-container {
+      width: 90%;
+    }
+
+    .project-card {
+      width: calc(50% - 1rem);
+
+      h2 {
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+
+      }
+     a{ .click-text {
+        font-size: 0.6rem;
+     }
+      }
+  
+      p {
+    
+        font-size: .7rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 4vw;
+    }
+
+    .card-container {
       width: 95%;
     }
-    th {
-      font-size: 0.9rem;
-    }
-    td {
-      font-size: 0.8rem;
+
+    .project-card {
+      width: 100%;
+      h2 {
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+
+      }
+     a{ .click-text {
+        font-size: 0.6rem;
+     }
+      }
+  
+      p {
+    
+        font-size: .7rem;
+      }
     }
   }
 }
+

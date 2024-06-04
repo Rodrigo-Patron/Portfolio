@@ -1,10 +1,35 @@
 import "./Contact.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_hym79e5', 'template_p1wu1es', form.current, {
+        publicKey: 'wD24yvfjuy_O8dim2',
+      })
+      .then(
+        () => {
+          console.log('Message sent!');
+          alert("Message has been sent!")
+        },
+        (error) => {
+          console.log('Message failed', error.text);
+        },
+      );
+  };
+
+
+
   return (
     <div className="contact" id="contact">
-      <h2>Contact me</h2>
+      <h1>Contact me</h1>
       <div className="icon-media">
         <a href="https://github.com/Rodrigo-Patron" target="_blank">
           <FaGithub />
@@ -16,16 +41,18 @@ const Contact = () => {
           <FaLinkedin />
         </a>
       </div>
-      <form action="https://formspree.io/f/xayknabe" method="POST">
+      <form >
+      {/* <form ref={form} onSubmit={sendEmail}> */}
         <div className="input-name-email">
           <input
             type="text"
+            name="user_name"
             id="name"
             minlength="2"
-            placeholder="Fullname"
+            placeholder="Name"
             required
           />
-          <input type="email" id="email" placeholder="Email" required />
+          <input type="email" name="user_email" id="email" placeholder="Email" required />
         </div>
         <textarea
           name="message"

@@ -1,46 +1,48 @@
+$color-white: #fbfbfb;
+$color-gray: #434343;
+$color-black: #000000;
 $color-green: #395e66;
-$color-green2: #9cc5a1;
-$color-green3: #bed6db;
-$color-white: rgb(255, 255, 255);
-$color-gray: rgb(153, 153, 153);
 
 @mixin placeholder {
-  color: $color-green;
+  color: #cecece;
   opacity: 0.6;
   font-size: 0.9rem;
 }
 
 .contact {
-  height: 80vh;
-  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
+  overflow: hidden;
+
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+    font-size: 2vw;
     text-align: center;
-    color: $color-green;
-    padding-bottom: 3rem;
+    color: $color-white;
   }
+
   .icon-media {
     margin-bottom: 1rem;
+
     a {
-      color: $color-green;
-      font-size: 1.8rem;
+      font-size: 1.5vw;
       padding: 0 1rem;
-    }
-    a:hover {
-      color: $color-green3;
+
+      :hover {
+       color: #dedede;
+      }
     }
   }
+
   form {
     border-radius: 10px;
-    width: 80%;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(214, 235, 217, 0.5);
+    background-color: rgb(57, 94, 102, 0.3);
     padding: 2rem 2rem;
     #name {
       margin-right: 0.2rem;
@@ -53,7 +55,8 @@ $color-gray: rgb(153, 153, 153);
     input {
       width: 49.5%;
       margin-bottom: 1rem;
-      color: $color-green;
+      color: $color-white;
+      background-color: rgb(0, 0, 0, 0.5);
       border: none;
       border-radius: 5px;
       padding-left: 0.5rem;
@@ -66,7 +69,8 @@ $color-gray: rgb(153, 153, 153);
     }
     textarea {
       border: none;
-      color: $color-green;
+      color: $color-white;
+      background-color: rgb(0, 0, 0, 0.5);
       padding-left: 0.5rem;
       border-radius: 5px;
     }
@@ -80,21 +84,27 @@ $color-gray: rgb(153, 153, 153);
   .btn {
     margin: 1rem auto 0;
     width: fit-content;
-    background-color: $color-green;
+
+    background-color: rgba(13, 21, 23, 0.7);
     box-shadow: 0 0 2px $color-gray;
     color: $color-white;
     border-radius: 5px;
     padding: 0.2rem 2rem;
   }
   .btn:hover {
-    color: $color-green;
-    background-color: $color-green3;
+    color: $color-white;
+    background-color: rgba(13, 21, 23, 0.4);
+  }
+  .btn:active{
+    transform: scale(.9);
   }
 }
 
-@media screen and (max-width: 1040px) {
+@media (max-width: 1040px) {
   .contact {
+
     form {
+    
       input {
         width: 100%;
       }
@@ -102,25 +112,40 @@ $color-gray: rgb(153, 153, 153);
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 768px) {
   .contact {
-    margin-top: 15%;
-
-    h2 {
-      font-size: 2rem;
-      padding-bottom: 1.5rem;
+    h1 {
+      font-size: 3vw;
+      margin-bottom: 1.5rem;
     }
     form {
+      width: 60vw;
       input {
         width: 100%;
+        font-size: 1rem;
+      }
+      textarea::placeholder, input::placeholder {
+      font-size: .8rem;
+      }
+      .btn{
+        font-size: .6rem;
       }
     }
 
     .icon-media {
       margin-bottom: 0.6rem;
       a {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+ 
+    h1 {  
+      font-size: 4vw;
     }
   }
 }
