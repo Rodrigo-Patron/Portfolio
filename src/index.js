@@ -5,7 +5,7 @@ import App from "./App.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="/My-Portfolio">
+  <BrowserRouter basename="/Portfolio">
     <App />
   </BrowserRouter>
 );
