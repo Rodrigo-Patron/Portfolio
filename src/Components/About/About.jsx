@@ -7,11 +7,10 @@ const About = () => {
 
       <p>
         I'm a Fullstack Software Developer with a strong drive and passion for
-        continuous learning. I'm always excited to contribute into innovative projects
+        continuous learning. I'm always excited to contribute to innovative projects
         and use smart technologies to make a real impact.<br/> <br/> With my mix of
-        experience, adaptability, and commitment for problem-solving, I bring fresh ideas to the table. Additionally, I've got the soft
-        skills needed to work well with others and keep the communication
-        flowing.
+        experience, adaptability, and commitment to problem-solving, I bring fresh ideas to the table. Additionally, I've got the soft
+        skills needed to work well with others and keep communication flowing.
       </p>
     </div>
   );

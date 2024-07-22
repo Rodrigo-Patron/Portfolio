@@ -31,7 +31,7 @@ $color-green: #395e66;
       padding: 0 1rem;
 
       :hover {
-       color: #dedede;
+        color: #dedede;
       }
     }
   }
@@ -95,16 +95,14 @@ $color-green: #395e66;
     color: $color-white;
     background-color: rgba(13, 21, 23, 0.4);
   }
-  .btn:active{
-    transform: scale(.9);
+  .btn:active {
+    transform: scale(0.9);
   }
 }
 
 @media (max-width: 1040px) {
   .contact {
-
     form {
-    
       input {
         width: 100%;
       }
@@ -124,11 +122,12 @@ $color-green: #395e66;
         width: 100%;
         font-size: 1rem;
       }
-      textarea::placeholder, input::placeholder {
-      font-size: .8rem;
+      textarea::placeholder,
+      input::placeholder {
+        font-size: 0.8rem;
       }
-      .btn{
-        font-size: .6rem;
+      .btn {
+        font-size: 0.6rem;
       }
     }
 
@@ -143,8 +142,7 @@ $color-green: #395e66;
 
 @media (max-width: 480px) {
   .contact {
- 
-    h1 {  
+    h1 {
       font-size: 4vw;
     }
   }
